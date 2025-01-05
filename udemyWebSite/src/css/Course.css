@@ -1,0 +1,59 @@
+.course-main {
+  display: flex;
+  flex-wrap: wrap; /* Öğelerin birden fazla satıra taşınmasını sağlar */
+  gap: 20px; /* Öğeler arasına boşluk ekler */
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Kenarlara iç boşluk ekler */
+  min-height: 100vh; /* Yüksekliği ekrana uyarlar */
+  background-color: #f9f9f9; /* Arka plan rengi */
+}
+
+.course {
+  width: 300px; /* Genişlik */
+  max-width: 90%; /* Küçük ekranlarda genişliğin sınırlandırılması */
+  height: auto; /* Yüksekliğin içeriğe göre ayarlanması */
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  background-color: #ffffff;
+  overflow: hidden; /* Taşan içeriği gizler */
+  transition: transform 0.3s ease; /* Hover animasyonu için */
+}
+
+.course:hover {
+  transform: scale(1.05); /* Hover sırasında biraz büyütme efekti */
+}
+
+.course-image {
+  width: 100%; /* Görselin konteynıra tam oturması */
+  height: auto; /* Oranları koruyarak yüksekliği ayarla */
+  border-radius: 20px;
+}
+
+.course-title {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.course-desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 0 15px;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .course-main {
+    flex-direction: column; /* Mobilde dikey hizalama */
+    padding: 10px;
+  }
+
+  .course {
+    width: 100%; /* Mobilde tam genişlik */
+    max-width: 100%; /* Genişlik sınırı kalkar */
+  }
+}
